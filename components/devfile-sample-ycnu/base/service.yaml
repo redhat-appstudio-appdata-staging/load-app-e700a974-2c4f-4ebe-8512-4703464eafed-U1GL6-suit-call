@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-ycnu
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-ycnu
+    app.kubernetes.io/part-of: load-app-e700a974-2c4f-4ebe-8512-4703464eafed
+  name: devfile-sample-ycnu
+spec:
+  ports:
+  - name: "3001"
+    port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-ycnu
+status:
+  loadBalancer: {}
