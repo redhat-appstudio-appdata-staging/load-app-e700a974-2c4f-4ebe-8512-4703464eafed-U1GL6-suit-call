@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-ycnu
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-ycnu
+    app.kubernetes.io/part-of: load-app-e700a974-2c4f-4ebe-8512-4703464eafed
+  name: devfile-sample-ycnuk6aw
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  to:
+    kind: Service
+    name: devfile-sample-ycnu
+    weight: null
+status: {}

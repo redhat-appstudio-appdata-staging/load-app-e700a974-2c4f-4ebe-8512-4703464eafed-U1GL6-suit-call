@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-ycnu
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads-stage/test-rhtap-99-tenant/load-app-e700a974-2c4f-4ebe-8512-4703464eafed/devfile-sample-ycnu@sha256:26bf8c915560ab23c9a7c98186c035b31b5cdd26b7e326358ef066efd7d33938
+        name: my-nodejs
+        resources: {}
+status: {}
